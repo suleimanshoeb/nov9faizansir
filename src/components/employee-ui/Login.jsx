@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
          navigate('/')
         }else{
             navigate('/login')
-            setErrors("Incorrect email or password");
+            setErrors("Incorrect email or password !!!");
         }
     };
     setTimeout(() => {
@@ -30,13 +30,14 @@ import { useNavigate } from 'react-router-dom';
            
                     <Grid container spacing={2}align="center">
                         <Grid item xs={8}> </Grid>
-                        <Grid item xs={3}  >
-                            <Grid container spacing={2}>
+                        <Grid item xs={3} >
                                 <Card  sx={{marginTop:"30px",opacity:0.8,height:"350px"}}>
                                     <CardContent>
+                            <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                     <Typography align='center' variant='h5'>Employee Login </Typography>
                                 </Grid>
+                                <Grid item xs={12}></Grid>
                                 <Grid item xs={12}>
                                     <TextField onChange={(e)=>setEmail(e.target.value)} label="Email Id" variant='outlined' fullWidth/>
                                 </Grid>
@@ -51,9 +52,9 @@ import { useNavigate } from 'react-router-dom';
                                 <Grid item xs={12}>
                                     <span style={{color:"red"}}>{errors}</span>
                                 </Grid>
+                            </Grid>
                                     </CardContent>
                                 </Card>
-                            </Grid>
                         </Grid>
                     </Grid>
                
